@@ -1,7 +1,7 @@
 function autoInicioRelacionCliente(){
     
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://129.151.112.106:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -19,7 +19,7 @@ function autoInicioRelacionCliente(){
 function autoInicioCar(){
 
     $.ajax({
-        url:"http://localhost:8080/api/Car/all",
+        url:"http://129.151.112.106:8080/api/Car/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -39,7 +39,7 @@ function autoInicioCar(){
 function autoInicioMensajes(){
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://localhost:8080/api/Message/all",
+        url:"http://129.151.112.106:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -92,7 +92,7 @@ function guardarInformacionMensajes(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://localhost:8080/api/Message/save",
+        url:"http://129.151.112.106:8080/api/Message/save",
        
         
         success:function(response) {
@@ -127,7 +127,7 @@ function actualizarInformacionMensaje(idElemento){
     console.log(myData);
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://localhost:8080/api/Message/update",
+        url:"http://129.151.112.106:8080/api/Message/update",
         type:"PUT",
         data:dataToSend,
         contentType:"application/JSON",
@@ -150,7 +150,7 @@ function borrarMensaje(idElemento){
     let dataToSend=JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url:"http://localhost:8080/api/Message/"+idElemento,
+        url:"http://129.151.112.106:8080/api/Message/"+idElemento,
         type:"DELETE",
         data:dataToSend,
         contentType:"application/JSON",
