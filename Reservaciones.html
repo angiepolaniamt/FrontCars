@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Rent Car LLC</title>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="misestilos.css">
+<script type="text/javascript" src="js/misFuncionesReservaciones.js"></script>  
+</head>
+
+<body>
+    <header id="cabeceralogo">
+    <div>
+    <h1>Reservaciones </h1>
+    </div>
+    </header>
+    <nav id="menuprincipal">
+    <div>
+    <ul>
+    <li><a href="index.html">Principal-Reportes</a></li>
+    <li><a href="Gamas.html">Gamas</a></li>
+    <li><a href="Carros.html">Carros</a></li>
+    <li><a href="Clientes.html">Clientes</a></li>
+    <li><a href="Mensajes.html">Mensajes</a></li>
+    <li><a href="Reservaciones.html">Reservaciones</a></li>
+    </ul>
+    </div>
+    </nav>
+    <div id="miListaReservation"></div>
+    <button onclick="listarReservation()">Consultar Reservaciones</button>
+<label>Desde</label>
+<input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br>
+<label>Hasta</label>
+<input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br>
+    <select type="text" class="controlReservation" id="status">
+        <option value="" hidden>Seleccionar estado</option>
+        <option value="completed">completado</option>
+        <option value="cancelled">cancelado</option>
+        <option value="Programmed">Programado</option>
+    </select>
+<select id="select-client"></select>
+    <script type="text/javascript">
+        window.onload = autoInicioRelacionCliente();
+    </script>
+        <select id="select-car"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioCar();
+        </script>
+ <button onclick=" agregarReservation()">Guardar Reserva</button>
+
+ 
+</body>
+</html>
