@@ -58,7 +58,7 @@ function traerReporteDate(){
 
     function traerReporteClientes(){
         $.ajax({
-            url:"http://localhost:8080/api/Reservation/report-clients",
+            url:"http://129.151.112.106:8080/api/Reservation/report-clients",
             type:"GET",
             datatype:"JSON",
             success:function(respuesta){
